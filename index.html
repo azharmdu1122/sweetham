@@ -1,67 +1,146 @@
 <!DOCTYPE html>
-<html class="preload" lang="en">
-  <head>
-    <!-- Site designed for Drop by the team at 
-    ███╗   ██╗███████╗████████╗██╗     ██╗███████╗██╗   ██╗
-    ████╗  ██║██╔════╝╚══██╔══╝██║     ██║██╔════╝╚██╗ ██╔╝
-    ██╔██╗ ██║█████╗     ██║   ██║     ██║█████╗   ╚████╔╝ 
-    ██║╚██╗██║██╔══╝     ██║   ██║     ██║██╔══╝    ╚██╔╝  
-    ██║ ╚████║███████╗   ██║   ███████╗██║██║        ██║   
-    ╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚══════╝╚═╝╚═╝        ╚═╝    -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweetham — Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1E5631;
+      --secondary: #F48C06;
+      --background: #FFF8F0;
+      --text: #333333;
 
-    <!-- The name of your site that shows up in the browser tab -->
-    <title>Welcome to my site</title>
 
-    <!-- Describe what your site is about -->
-    <meta name="description" content="A list of places you can find me on the web.">
+      --primary-light: #2E7D4E; /* Lighter green */
+      --secondary-light: #FFA630; /* Lighter orange */
+      --midpoint: #A5C96B; /* Harmonious midpoint color */
+    }
 
-  </head>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
 
-  <!-- This class is removed if the user has JavaScript enabled -->
-  <body class="no-js">
-    <header>
-      <!-- Dark mode toggle -->
-      <div class="mode-toggle">
-        <button class="[ toggle-button ] [ js-mode-toggle ]">
-          <span class="toggle-icon" aria-hidden="true"></span>
-          <span class="[ toggle-text ] [ js-mode-toggle-text ]">Switch to dark theme</span>
-        </button>
-      </div>
-    </header>
-    <main>
-      <section class="about">
-        <h1>Frodo Baggins</h1>
-        <p>Frodo is a proven leader who thrives in small teams and can go the distance.</p>
-      </section>
-      <nav class="links">
-        <!-- Update <a href=""> to point to your accounts -->
-        <!-- Update <span> to your usernames -->
-        <a href="mailto:frodo@bag.end">
-          <strong>E-mail</strong>
-          <span>frodo@bag.end</span>
-        </a>
-        <a href="https://twitter.com/frodobaggins">
-          <strong>Twitter</strong>
-          <span>@frodobaggins</span>
-        </a>
-        <a href="https://linkedin.com">
-          <strong>LinkedIn</strong>
-          <span>@frodobaggins</span>
-        </a>
-        <a href="https://github.com">
-          <strong>GitHub</strong>
-          <span>@frodobags</span>
-        </a>
-        <a href="https://codepen.io">
-          <strong>CodePen</strong>
-          <span>@frodobags</span>
-        </a>
-      </nav>
-    </main>
+    img.logo {
+      max-width: 400px;
+      margin-bottom: 2rem;
+    }
 
-    <!-- Dark mode button functionality -->
-  </body>
+    .coming-soon {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+      100% { transform: scale(1); }
+    }
+
+    .follow {
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    .insta-btn {
+      background-color: var(--secondary);
+      color: white;
+      text-decoration: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 30px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .insta-btn:hover {
+      background-color: #d97706;
+    }
+
+    .insta-btn1 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      /* background: linear-gradient(45deg, #1E5631, #1E5631, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); */
+       background: linear-gradient(
+        45deg,
+        var(--primary),
+        var(--primary-light),
+        var(--secondary-light),
+        var(--secondary)
+      );
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .insta-btn1:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .insta-btn1 i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      bottom: 0;
+  position: absolute;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (min-width: 768px) {
+      .coming-soon {
+        font-size: 1.7rem;
+      }
+
+      img.logo {
+        max-width: 480px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <img src="logo.png" alt="Sweetham Logo" class="logo" />
+
+  <div class="coming-soon">🎉 We're Coming Soon! 🎉</div>
+
+  <div class="follow">
+    Follow us for Sweet updates:
+    <br />
+    <a href="https://instagram.com/sweetham.in" class="insta-btn1" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  </div>
+  
+
+  <footer>
+    &copy; 2025 Sweetham. All rights reserved.
+  </footer>
+</body>
 </html>
